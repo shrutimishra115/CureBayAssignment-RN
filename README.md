@@ -1,3 +1,13 @@
+Note:
+
+Please note that due to system limitations, I am unable to install Xcode and Android Studio, as my macOS only supports macOS version 12.7.6. However, I have tested all the challenges in snack expo.
+
+# React Native Coding Challenge App
+
+This project contains solutions to three React Native coding challenges, each accessible via a Bottom Tab Navigator. The project is written in **TypeScript** and uses **React Navigation** for screen navigation.
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
