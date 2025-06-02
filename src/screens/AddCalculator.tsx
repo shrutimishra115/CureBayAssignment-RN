@@ -68,10 +68,14 @@ const AddCalculator = () => {
         value={value}
       />
       <View style={styles.controls}>
-        <TouchableOpacity onPress={() => increment(setValue, value)}>
+        <TouchableOpacity
+          onPress={() => increment(setValue, value)}
+          testID={`increment-${placeholder}`}>
           <Ionicons name="caret-up" size={15} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => decrement(setValue, value)}>
+        <TouchableOpacity
+          onPress={() => decrement(setValue, value)}
+          testID={`decrement-${placeholder}`}>
           <Ionicons name="caret-down" size={15} color="black" />
         </TouchableOpacity>
       </View>

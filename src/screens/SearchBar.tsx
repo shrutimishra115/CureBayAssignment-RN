@@ -38,13 +38,17 @@ const handleSearch = () => {
           underlineColorAndroid="transparent"
         />
 
-        <TouchableOpacity onPress={handleSearch} style={styles.iconButton}>
+        <TouchableOpacity
+          onPress={handleSearch}
+          style={styles.iconButton}
+          testID="search-button">
           <Ionicons name="search" size={20} color="black" />
         </TouchableOpacity>
         {showDropdown && (
           <TouchableOpacity
             onPress={() => setShowDropdown(false)}
-            style={styles.iconButton}>
+            style={styles.iconButton}
+            testID="close-button">
             <Ionicons name="close" size={20} color="black" />
           </TouchableOpacity>
         )}
