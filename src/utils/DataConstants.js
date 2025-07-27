@@ -2,7 +2,7 @@ import {
   Ionicons,
   FontAwesome5,
   MaterialCommunityIcons,
-} from '@expo/vector-icons';
+} from 'react-native-vector-icons';
 
 export const VitalFields = [
   {

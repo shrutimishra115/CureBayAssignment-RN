@@ -3,9 +3,55 @@ Note:
 Please note that due to system limitations, I am unable to install Xcode and Android Studio, as my macOS only supports macOS version 12.7.6. However, I have tested all the challenges in snack expo.
 
 # React Native Coding Challenge App
+ 1. Vitals Form UI Matching Figma
+> Recreated custom input boxes to match provided Figma/mobile screenshot.
+> Included left-aligned icons in circular pale-blue background.
+> Unit labels (cm, kg, etc.) added to the right side inside input box with consistent height.
 
-This project contains solutions to three React Native coding challenges, each accessible via a Bottom Tab Navigator. The project is written in **TypeScript** and uses **React Navigation** for screen navigation.
+2. Dynamic & Scalable Form Design
+> Converted all vitals inputs (Height, Weight, BP, etc.) into a data-driven structure.
+> Mapped InputText component dynamically using FlatList for scalability and performance.
 
+3. BMI Auto-Calculation
+> Extracted BMI calculation logic into a reusable utility.
+> Automatically recalculated BMI whenever height or weight changes.
+
+4. Error Handling for Inputs
+> Inline form validation and error display for each input.
+> Required fields display error messages below inputs when left empty.
+
+5. Keyboard Avoidance
+> Wrapped form with KeyboardAvoidingView + TouchableWithoutFeedback for better UX.
+> Enabled smooth interaction and scrolling when keyboard is open.
+
+6. Vitals Modal + Dashboard Trigger 
+> Designed a clean Dashboard screen with a + Add Vitals button.
+> Clicking the button opens the Add Vitals form in a modal.
+> Success message appears briefly and disappears automatically.
+
+
+7. Redux Toolkit State Management
+> Set up redux-toolkit to store and manage vitals data.
+
+> All form submissions dispatch to Redux and save entries with timestamp.
+
+8. Vitals History Charting
+> Implemented a responsive VitalsHistory screen.
+> Used react-native-gifted-charts to render:
+Heart Rate
+Blood Pressure (SYS/DIA)
+SpO₂
+BMI
+> Added date filter (daily) with @react-native-community/datetimepicker.
+
+9. Smart Alerts System +  Vital Edit Modal
+> Post-submit logic to detect:
+High BP, Low SpO₂, High Heart Rate
+> Alert screen shows warning cards with suggested actions (e.g. "Consult Doctor", "Take Rest").
+> Each indivisual vital can be updated separately, along with suceess and error message
+
+10. Test Coverage for Components
+> Wrote unit tests for all major components using Jest and React Native Testing Library.
 
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
