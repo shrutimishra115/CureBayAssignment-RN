@@ -5,6 +5,9 @@
 import React from 'react';
 import {render} from '@testing-library/react-native';
 import App from '../App';
+import {Provider} from 'react-redux';
+import {configureStore} from '@reduxjs/toolkit';
+import vitalsReducer from '../src/redux/VitalSlice';
 
 jest.mock('@react-navigation/native', () => {
   const React = require('react');
@@ -13,7 +16,7 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 
-jest.mock('../src/navigation/BottomTabBar', () => {
+jest.mock('../src/navigation/Navigation', () => {
   
   return () => <MockedTabs />;
 });
@@ -28,10 +31,20 @@ const MockedScreen = () => {
     </>
   );
 };
+const MockStore = configureStore({
+  reducer: {
+    vitals: vitalsReducer,
+  },
+});
 
-describe('App Component', () => {
-  it('renders BottomTabs inside NavigationContainer', () => {
-    const {getByTestId} = render(<App />);
+describe('App Component with Redux Provider', () => {
+  it('renders BottomTabs inside NavigationContainer with Redux provider', () => {
+    const {getByTestId} = render(
+      <Provider store={MockStore}>
+        <App />
+      </Provider>,
+    );
+
     expect(getByTestId('mocked-tabs')).toBeTruthy();
   });
 });
